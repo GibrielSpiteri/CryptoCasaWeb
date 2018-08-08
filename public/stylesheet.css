@@ -1,0 +1,130 @@
+html{
+  font-family: Roboto;
+}
+
+.header{
+  width: 100%;
+  height: 9%;
+  min-height: ;
+  border: 0px;
+  border-bottom: 2px;
+  border-color: #333E47;
+  border-style: solid;
+}
+
+.header_h1{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  width:50%;
+}
+.header_text{
+   display:inline-block;
+   width:75%;
+   text-align:center;
+}
+
+.frame {
+    height: 100%;      /* equals max image height */
+    width: 160px;
+    white-space: nowrap; /* this is required unless you put the helper span closely near the img */
+    text-align: center;
+    display:inline-block;
+    margin-left:50px;
+    padding-top:0;
+    margin-top:0;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+select{
+  position: relative;
+}
+img {
+    vertical-align: middle;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.thead-dark{
+  background-color:#333E47;
+  color: #FFFFFF;
+}
+table, tr, th, td{
+  width:auto;
+  margin:0 auto;
+  text-align: center;
+  vertical-align: middle;
+  word-break:keep-all;
+  word-wrap: normal;
+}
+th{
+  /* padding:20px;  */
+  /* width:auto; */
+}
+.raisedbox {
+	padding: 10px;
+  border: 1px solid #333E47;
+	box-shadow:  -1px -1px #E1E1E1, - 2px -2px #E1E1E1
+}
+h4{
+  text-align: center;
+}
+/*
+.file-field.medium .file-path-wrapper {
+  height: 3rem; }
+  .file-field.medium .file-path-wrapper .file-path {
+    height: 2.8rem; }
+    input[type="file"] {
+    display: none;
+}
+*/
+
+.file_element{
+  display:none;
+}
+.custom-file-upload {
+    border: 1px solid #8E8E8E;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.list-group{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#myProgress {
+  width: 100%;
+  background-color: #333E47;
+}
+
+#myBar {
+  width: 0%;
+  height: 30px;
+  background-color: #FFD200;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
+}
+.navbar-toggle {
+    z-index:3;
+}
+
+.navbar.navbar-default {
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
