@@ -2,6 +2,42 @@ html{
   font-family: Roboto;
 }
 
+/* Create two equal columns that floats next to each other */
+.col {
+  text-align: left;
+  float: left;
+  width: 33%;
+  height:400px;
+  padding: 10px;
+
+  margin:auto;
+}
+
+/* .row{
+  padding:5px;
+} */
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    padding:5px;
+}
+.small-trick{
+  width: 0 ;
+  height: 100%;
+  display: inline-block;
+  vertical-align: bottom;;
+}
+.inline{
+  display:inline-block;
+}
+.center{
+  text-align: center;
+}
+.vert{
+  vertical-align: middle;
+}
 .header{
   width: 100%;
   height: 9%;
@@ -70,18 +106,9 @@ th{
   border: 1px solid #333E47;
 	box-shadow:  -1px -1px #E1E1E1, - 2px -2px #E1E1E1
 }
-h4{
-  text-align: center;
+h4, h3{
+  text-align: left;
 }
-/*
-.file-field.medium .file-path-wrapper {
-  height: 3rem; }
-  .file-field.medium .file-path-wrapper .file-path {
-    height: 2.8rem; }
-    input[type="file"] {
-    display: none;
-}
-*/
 
 .file_element{
   display:none;

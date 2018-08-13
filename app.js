@@ -17,7 +17,8 @@ const path       = require('path'); // For creating a public download page to sh
 // const csvParser  = require('csv-parse'); // Parses csv files
 // const fs         = require('fs'); // Filereader
 // const passHash   = require('password-hash'); // Hashes passwords for safe storage
-
+var http = require('http');
+var debug = require('debug')('cryptocasa:server');
 //variables
 var connection;            // MySql Object - Connection to database
 var sesh;                  // Session Variable - Admin login session
@@ -72,6 +73,10 @@ app.get('/', function(req, res) {
   res.render('pages/rentalView');
 });
 
+app.get('/listing', function(req, res) {
+  res.render('pages/listingView');
+});
+
 /*-----------------------------CONNECTION PROTOCOL----------------------------*/
 /**
 * Attempts to connect to the database and initialize the tables - Will continue to do this until successful
@@ -105,8 +110,89 @@ function handleDisconnect() {
 * Listen to the IP:Port
 */
 // app.listen(process.env.PORT);
-var server = app.listen(3005, "10.61.32.135", function() {
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log("Listening at http://%s:%s", host, port);
-});
+// var server = app.listen(3005, "10.61.32.135", function() {
+//   var host = server.address().address;
+//   var port = server.address().port;
+//   console.log("Listening at http://%s:%s", host, port);
+// });
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+}
