@@ -24,13 +24,13 @@ var sesh;                  // Session Variable - Admin login session
 const DOWNLOAD_FOLDER      = './public/downloads/' // String (download path) - Where to download files
 
 //Defining the settings for the database
-// const db_config = {
-//   host: '10.61.32.135',
-//   port: '3306',
-//   user: 'root',
-//   password: 'casa123',
-//   database: 'CryptoCasa'
-// };
+const db_config = {
+  host: 'localhost',
+  port: '3306',
+  user: 'root',
+  password: 'casa123',
+  database: 'CryptoCasa'
+};
 
 /*-----------------------------APPLICATION SETUP------------------------------*/
 
@@ -105,7 +105,7 @@ function handleDisconnect() {
 * Listen to the IP:Port
 */
 // app.listen(process.env.PORT);
-var server = app.listen(3005, "10.61.32.135", function() {
+var server = app.listen(3005, "localhost", function() {
   var host = server.address().address;
   var port = server.address().port;
   console.log("Listening at http://%s:%s", host, port);
