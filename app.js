@@ -47,7 +47,7 @@ var StatusEnum = Object.freeze({"open":1, "closed": 2});
 var storage = multer.diskStorage({
   destination:DOWNLOAD_FOLDER,
   filename: function(req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now() + '.csv')
+    cb(null, file.fieldname + '-' + Date.now())
   }
 });
 var upload = multer({storage:storage});
