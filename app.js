@@ -72,6 +72,10 @@ app.get('/', function(req, res) {
   res.render('pages/rentalView');
 });
 
+app.get('/listing', function(req, res) {
+  res.render('pages/listingView');
+});
+
 /*-----------------------------CONNECTION PROTOCOL----------------------------*/
 /**
 * Attempts to connect to the database and initialize the tables - Will continue to do this until successful

@@ -20,7 +20,6 @@
 <body>
 
   <div class="navbar" style="background-color:#53aa23;">
-    <div class="small-trick"></div>
     <div class="inline">
       <a href="/"><span><img height="80px" src="/favicon.ico" alt="logo"/></span></a>
     </div>
@@ -32,102 +31,120 @@
     </div>
   </div>
 
-  <div id="houseDesc" style="width:40%;" class="col-md-offset-2">
-    <!-- Title of listing -->
-    <h1> A Beautiful Home in Hollywood Hills</h1>
-    <h4>Hollywood Hills, CA</h4>
-
-    <!-- Owner Info -->
-    <img src="profilePic.jpg" height="80px"/>
-    <p> The names Anon </p>
-
-    <!-- Home Info -->
-    <h1> About Anon's Home </h1>
-    <p>
-      My place is close to Caltrain, downtown Sunnyvale and is in the middle of Silicon Valley. You’ll love my place because of Homestyle living away from home. My place is good for couples, solo adventurers, business travelers, and furry friends (pets).
-
-      The space
-
-      My place is close to Caltrain, Downtown Sunnyvale and is in the middle of Silicon Valley. You’ll love my place because of Homestyle living away from home.. My place is good for couples, solo adventurers, business travelers, and furry friends (pets).
-
-      You will feel at home, whether your goal is to relax or get work done, I am confident you will find this the place to do it. Your room is fully equiped with high speed internet (wired and wireless), mini fridge, microwave, and a tv!
-
-      In room 37" tv.
-      Big 65" in the living room.
-      Full access to kitchen.
-      Super fast wifi.
-      Iron and ironing board.
-      I work long hours, so my availability is scarce. However I try my best to be there at least at check in, and to be there for any issues/needs of the guests. On weekends and after work some guests choose to have dinner, play video games, or just chill. When I have time I always enjoy meeting new people from different walks of life. Some guests prefer to have more privacy and spend the majority of time in their room, and that is fine with me too.
-
-      Safe neighborhood, close to excellent restaurants in downtown Sunnyvale and Mountain View.
-
-      Walking distance to Sunnyvale Caltrain. I am very bike friendly and will provide a space inside the garage for a bike.
-
-      Complimentary vegan breakfast with juice, coffee or tea is offered. Usually I have a variety of organic fruit, cereals, oatmeal, and bagels with spread. Selection may vary.
-
-      Guest access
-      In room 37" tv.
-      Big 65" in the living room.
-      DirectTV and Netflix
-      Full access to kitchen.
-      Super fast wifi.
-      Iron and ironing board.
-      Washer and dryer
-      Interaction with guests
-      Phone, email, or in-person. I am easy to reach and reasonable.
+  <div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-2"></div>
+      <div id="houseDesc" style="width:40%;" class="col-sm-8">
+        <div id="pictureContainer" style="width:40%">
+          <!-- Button trigger modal -->
+          <img class="img-responsive" src="house1.jpg" alt="mainImg"/>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            View more Pictures
+          </button>
 
 
-    </p>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body" style="text-align:center;">
 
-    <h1> Accommodations </h1>
-    <p>
-      Home type: Private Room
-      Sleeping arrangement: 1 Queen
-      Number of bathrooms: 1
-      Shared bathroom: Yes
-      Maximum number of guests: 2
-      Minimum number of nights: 1
-    </p>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-      View more Pictures
-    </button>
-  </div>
+                <img class="img-responsive mySlides" src="house2.jpeg" width="256px" height="256px">
+                <img class="img-responsive mySlides" src="house3.jpg" width="256px" height="256px">
+                <img class="img-responsive mySlides" src="house4.jpeg" width="256px" height="256px">
+                <img class="img-responsive mySlides" src="house5.jpg" width="256px" height="256px">
+                <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+                <script>
+                  var slideIndex = 1;
+                    showDivs(slideIndex);
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-body" style="text-align:center;">
-          <img class="mySlides" src="house1.jpg" width="256px" height="256px">
-          <img class="mySlides" src="house2.jpeg" width="256px" height="256px">
-          <img class="mySlides" src="house3.jpg" width="256px" height="256px"
-          <img class="mySlides" src="house4.jpeg" width="256px" height="256px">
-          <img class="mySlides" src="house5.jpg" width="256px" height="256px">
-          <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-          <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-          <script>
-            var slideIndex = 1;
-              showDivs(slideIndex);
+                    function plusDivs(n) {
+                      showDivs(slideIndex += n);
+                    }
 
-              function plusDivs(n) {
-                showDivs(slideIndex += n);
-              }
-
-              function showDivs(n) {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                if (n > x.length) {slideIndex = 1}
-                if (n < 1) {slideIndex = x.length} ;
-                for (i = 0; i < x.length; i++) {
-                  x[i].style.display = "none";
-                }
-                x[slideIndex-1].style.display = "block";
-            }
-          </script>
+                    function showDivs(n) {
+                      var i;
+                      var x = document.getElementsByClassName("mySlides");
+                      if (n > x.length) {slideIndex = 1}
+                      if (n < 1) {slideIndex = x.length} ;
+                      for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                      }
+                      x[slideIndex-1].style.display = "block";
+                  }
+                </script>
+              </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- Title of listing -->
+        <h1> A Beautiful Home in Hollywood Hills</h1>
+        <h4>Hollywood Hills, CA</h4>
+
+        <!-- Owner Info -->
+        <img src="profilePic.jpg" height="80px"/>
+        <p> The names Anon </p>
+
+        <!-- Home Info -->
+        <h1> About Anon's Home </h1>
+        <p>
+          My place is close to Caltrain, downtown Sunnyvale and is in the middle of Silicon Valley. You’ll love my place because of Homestyle living away from home. My place is good for couples, solo adventurers, business travelers, and furry friends (pets).
+
+          The space
+
+          My place is close to Caltrain, Downtown Sunnyvale and is in the middle of Silicon Valley. You’ll love my place because of Homestyle living away from home.. My place is good for couples, solo adventurers, business travelers, and furry friends (pets).
+
+          You will feel at home, whether your goal is to relax or get work done, I am confident you will find this the place to do it. Your room is fully equiped with high speed internet (wired and wireless), mini fridge, microwave, and a tv!
+
+          In room 37" tv.
+          Big 65" in the living room.
+          Full access to kitchen.
+          Super fast wifi.
+          Iron and ironing board.
+          I work long hours, so my availability is scarce. However I try my best to be there at least at check in, and to be there for any issues/needs of the guests. On weekends and after work some guests choose to have dinner, play video games, or just chill. When I have time I always enjoy meeting new people from different walks of life. Some guests prefer to have more privacy and spend the majority of time in their room, and that is fine with me too.
+
+          Safe neighborhood, close to excellent restaurants in downtown Sunnyvale and Mountain View.
+
+          Walking distance to Sunnyvale Caltrain. I am very bike friendly and will provide a space inside the garage for a bike.
+
+          Complimentary vegan breakfast with juice, coffee or tea is offered. Usually I have a variety of organic fruit, cereals, oatmeal, and bagels with spread. Selection may vary.
+
+          Guest access
+          In room 37" tv.
+          Big 65" in the living room.
+          DirectTV and Netflix
+          Full access to kitchen.
+          Super fast wifi.
+          Iron and ironing board.
+          Washer and dryer
+          Interaction with guests
+          Phone, email, or in-person. I am easy to reach and reasonable.
+
+
+        </p>
+
+        <h1> Accommodations </h1>
+        <p>
+          Home type: Private Room
+          Sleeping arrangement: 1 Queen
+          Number of bathrooms: 1
+          Shared bathroom: Yes
+          Maximum number of guests: 2
+          Minimum number of nights: 1
+        </p>
+      </div>
+      <div class="col-sm-2 sidenav">
+        <h3><strong>500</strong> Casa/ night    <strong>1000</strong> USD/ night</h3>
+        <label for="moveIn"> Move in Day </label>
+        <input type="date" id="moveIn" name="moveIn"/>
+        <label for="moveOut"> Move out Day </label>
+        <input type ="date" id="moveOut" name="moveOut"/>
+        <br><input type="submit" name="Reserve"/>
       </div>
     </div>
   </div>
+
 </body>
 </html>
